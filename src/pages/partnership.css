@@ -1,0 +1,1371 @@
+.partnership-page {
+  padding-top: clamp(36px, 5.5vw, 76px);
+  padding-bottom: clamp(48px, 6vw, 88px);
+}
+
+.partnership-page *,
+.partnership-page *::before,
+.partnership-page *::after {
+  box-sizing: border-box;
+}
+
+.partnership-page :is(h1, h2, h3, h4, h5, p) {
+  margin-top: 0;
+}
+
+.partnership-page :is(p, dd, h1, h2, h3, h4, h5, label, .button) {
+  overflow-wrap: anywhere;
+}
+
+.partnership-page svg {
+  flex-shrink: 0;
+}
+
+.partnership-page :is(a, button, select, input, summary):focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+}
+
+.partnership-intro {
+  display: grid;
+  grid-template-columns: 1.16fr 0.84fr;
+  gap: clamp(32px, 5vw, 76px);
+  align-items: center;
+}
+
+.partnership-intro .page-header {
+  max-width: none;
+  margin: 0;
+  padding: 8px 0;
+  text-align: left;
+}
+
+.partnership-intro .page-header .eyebrow {
+  justify-content: flex-start;
+}
+
+.partnership-intro h1 {
+  max-width: 650px;
+  margin: 20px 0 22px;
+  color: var(--emerald);
+  font-size: clamp(2.65rem, 4.8vw, 4.2rem);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.partnership-intro .page-header > p {
+  max-width: 550px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.0625rem;
+  line-height: 1.85;
+}
+
+.partnership-intro-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 22px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.partnership-intro-actions > span {
+  max-width: 170px;
+  color: var(--muted);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+
+.partnership-principle {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(26px, 3vw, 40px);
+  border: 1px solid var(--emerald);
+  border-radius: 22px 22px 70px 22px;
+  background:
+    radial-gradient(ellipse at 100% 0, #82945729, transparent 65%),
+    var(--forest-gradient);
+  color: var(--ivory);
+  box-shadow:
+    0 18px 38px -18px #103e3040,
+    inset 0 1px #eed7a821;
+}
+
+.partnership-principle::before,
+.partnership-principle::after {
+  position: absolute;
+  z-index: -1;
+  top: 88px;
+  right: -107px;
+  width: 270px;
+  height: 340px;
+  border: 1px solid rgb(228 210 167 / 14%);
+  border-radius: 150px 150px 0 0;
+  content: '';
+  pointer-events: none;
+}
+
+.partnership-principle::after {
+  top: 106px;
+  right: -87px;
+  width: 230px;
+  height: 320px;
+}
+
+.partnership-principle-top,
+.partnership-principle-bottom {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.partnership-principle-top {
+  justify-content: space-between;
+  color: #dfc99f;
+}
+
+.partnership-small-label {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.partnership-connected-icons {
+  display: flex;
+  align-items: center;
+  margin: 32px 0 26px;
+}
+
+.partnership-connected-icons > span:not(.partnership-connection) {
+  display: grid;
+  width: 66px;
+  height: 66px;
+  place-items: center;
+  border: 1px solid rgb(248 247 242 / 23%);
+  border-radius: 18px;
+  background: linear-gradient(135deg, #f8f7f212, #f8f7f205);
+  color: #e5d0a8;
+  box-shadow:
+    0 4px 10px #05221d1a,
+    inset 0 1px #ffffff14;
+}
+
+.partnership-connection {
+  display: flex;
+  width: 62px;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+}
+
+.partnership-connection span {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #bda57e;
+}
+
+.partnership-principle h2 {
+  margin-bottom: 15px;
+  color: var(--ivory);
+  font-size: clamp(1.6rem, 2.4vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.35;
+}
+
+.partnership-principle > p {
+  max-width: 340px;
+  margin-bottom: 26px;
+  color: #d2dfd5;
+  font-size: 0.9375rem;
+  line-height: 1.8;
+}
+
+.partnership-principle-bottom {
+  padding-top: 20px;
+  border-top: 1px solid rgb(248 247 242 / 18%);
+  color: #e0ccaa;
+  font-size: 0.8125rem;
+}
+
+.partnership-section {
+  margin-top: clamp(56px, 6.5vw, 88px);
+}
+
+.partnership-section-heading {
+  display: flex;
+  gap: 24px;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.partnership-section-heading h2 {
+  margin: 13px 0 0;
+  color: var(--emerald);
+  font-size: clamp(1.6rem, 2.6vw, 2.125rem);
+  letter-spacing: -0.045em;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+.partnership-section-heading > p {
+  max-width: 330px;
+  margin: 0 0 2px;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.75;
+}
+
+.partnership-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--border);
+  list-style: none;
+  box-shadow: var(--shadow-card);
+}
+
+.partnership-steps > li {
+  padding: 24px 24px 28px;
+  background: var(--surface);
+  transition: box-shadow 0.3s;
+}
+
+.partnership-step-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 21px;
+  color: var(--emerald);
+}
+
+.partnership-step-number {
+  color: #937340;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.875rem;
+  line-height: 1;
+}
+
+.partnership-step-top > svg {
+  opacity: 0.75;
+}
+
+.partnership-steps h3 {
+  margin-bottom: 9px;
+  color: var(--ink);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.45;
+}
+
+.partnership-steps p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.84375rem;
+  line-height: 1.8;
+}
+
+.partnership-role-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.partnership-role-card {
+  padding: 30px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow-card);
+  transition:
+    transform 0.35s var(--ease-out),
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+
+.partnership-role-team {
+  background: var(--surface-sage);
+}
+
+.partnership-role-institution {
+  background: var(--surface-gold);
+}
+
+.partnership-role-card > header {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgb(36 60 54 / 12%);
+}
+
+.partnership-role-icon {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  flex: 0 0 54px;
+  place-items: center;
+  border: 1px solid rgb(18 75 62 / 13%);
+  border-radius: 15px;
+  background: rgb(255 255 255 / 55%);
+  color: var(--emerald);
+  box-shadow:
+    inset 0 1px #fff,
+    0 4px 10px #123f3108;
+}
+
+.partnership-role-institution .partnership-role-icon {
+  border-color: rgb(123 92 41 / 16%);
+  color: #7b5c29;
+}
+
+.partnership-role-card .partnership-small-label {
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-size: 0.625rem;
+}
+
+.partnership-role-card h3 {
+  margin-bottom: 0;
+  color: var(--emerald);
+  font-size: 1.25rem;
+  letter-spacing: -0.035em;
+  line-height: 1.4;
+}
+
+.partnership-role-card ul {
+  display: grid;
+  gap: 22px;
+  margin: 25px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.partnership-role-card li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.partnership-role-card li > svg {
+  margin-top: 3px;
+  color: var(--emerald);
+}
+
+.partnership-role-card h4 {
+  margin-bottom: 5px;
+  color: var(--ink);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.partnership-role-card li p {
+  max-width: 410px;
+  margin-bottom: 0;
+  color: #5c6b60;
+  font-size: 0.875rem;
+  line-height: 1.75;
+}
+
+.partnership-planner {
+  overflow: hidden;
+  border: 1px solid #cdd9cf;
+  border-radius: 24px;
+  background: linear-gradient(130deg, #f5f7ef, #eaf2e8);
+  scroll-margin-top: 110px;
+  box-shadow: var(--shadow-card);
+}
+
+.partnership-planner-heading {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 34px 40px;
+  background:
+    radial-gradient(ellipse at 100% 0, #64864e33, transparent 70%),
+    var(--forest-gradient);
+  color: var(--ivory);
+}
+
+.partnership-planner-heading .eyebrow {
+  color: #e3cfa7;
+}
+
+.partnership-planner-heading h2 {
+  margin: 13px 0 12px;
+  color: var(--ivory);
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  letter-spacing: -0.045em;
+  line-height: 1.2;
+}
+
+.partnership-planner-heading p {
+  max-width: 650px;
+  margin-bottom: 0;
+  color: #d2dfd5;
+  font-size: 0.9375rem;
+  line-height: 1.8;
+}
+
+.partnership-planner-mark {
+  display: grid;
+  width: 82px;
+  height: 82px;
+  flex: 0 0 82px;
+  place-items: center;
+  border: 1px solid rgb(227 207 167 / 35%);
+  border-radius: 50%;
+  color: #e3cfa7;
+}
+
+.partnership-planner-body {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+  gap: 32px;
+  align-items: start;
+  padding: 36px;
+}
+
+.partnership-planner-controls,
+.partnership-planner-fields,
+.partnership-field,
+.pilot-print-summary {
+  min-width: 0;
+}
+
+.partnership-planner-fields,
+.partnership-contact-editor fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.partnership-planner-fields > legend {
+  padding: 0;
+  color: var(--ink);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.5;
+}
+
+.partnership-planner-fields > p:first-of-type {
+  margin: 9px 0 25px;
+  color: #5c6b60;
+  font-size: 0.875rem;
+  line-height: 1.75;
+}
+
+.partnership-field {
+  margin-bottom: 22px;
+}
+
+.partnership-field label {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--ink);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.partnership-select-wrap {
+  position: relative;
+}
+
+.partnership-select-wrap > svg {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  color: var(--emerald);
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.partnership-field :is(select, input) {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 50px;
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid #cbd4c9;
+  border-radius: 9px;
+  background: var(--white);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  box-shadow:
+    inset 0 1px #fff,
+    0 2px 5px #123f3105;
+  transition:
+    border-color 0.25s,
+    box-shadow 0.25s;
+}
+.partnership-field :is(select, input):focus-visible {
+  border-color: #86a578;
+  box-shadow: 0 0 0 3px #a9be8b26;
+}
+
+.partnership-field select {
+  padding-right: 39px;
+  appearance: none;
+  cursor: pointer;
+}
+
+.partnership-field select:hover,
+.partnership-field input:hover {
+  border-color: #7f9c8c;
+}
+
+.partnership-field > p,
+.partnership-field-footnote {
+  margin: 8px 0 0;
+  color: #5c6b60;
+  font-size: 0.75rem;
+  line-height: 1.7;
+}
+
+.partnership-field-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.partnership-field-row .partnership-field {
+  margin-bottom: 0;
+}
+
+.partnership-contact-editor {
+  margin-top: 27px;
+  border-top: 1px solid #d4ddcf;
+  border-bottom: 1px solid #d4ddcf;
+}
+
+.partnership-contact-editor > summary {
+  display: flex;
+  min-height: 58px;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 1px;
+  color: var(--emerald);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.6;
+  list-style: none;
+  cursor: pointer;
+}
+
+.partnership-contact-editor > summary::-webkit-details-marker {
+  display: none;
+}
+
+.partnership-contact-editor > summary > span {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+
+.partnership-contact-editor[open] > summary > svg {
+  transform: rotate(180deg);
+}
+
+.partnership-contact-editor fieldset {
+  padding: 8px 0 0;
+}
+
+.partnership-contact-editor legend {
+  padding: 0;
+  color: var(--ink);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.partnership-contact-editor fieldset > p {
+  margin: 9px 0 20px;
+  color: #5c6b60;
+  font-size: 0.8125rem;
+  line-height: 1.8;
+}
+
+.partnership-planner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  align-items: center;
+  margin-top: 27px;
+}
+
+.partnership-planner-actions .button {
+  min-height: 46px;
+  gap: 9px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.partnership-planner-actions .button-text {
+  padding-right: 3px;
+  padding-left: 3px;
+}
+
+.partnership-local-note {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin: 19px 0 0;
+  color: #5c6b60;
+  font-size: 0.75rem;
+  line-height: 1.7;
+}
+
+.partnership-local-note > svg {
+  margin-top: 3px;
+}
+
+.pilot-print-summary {
+  padding: 29px;
+  border: 1px solid #e0e5dc;
+  border-top: 3px solid var(--gold);
+  border-radius: 3px 3px 14px 14px;
+  background: var(--white);
+  box-shadow: 0 9px 24px rgb(36 60 54 / 4%);
+}
+
+.partnership-summary-label {
+  display: inline-flex;
+  gap: 7px;
+  align-items: center;
+  color: #72572c;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.partnership-summary-label > span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.partnership-summary-heading h3 {
+  margin: 11px 0 9px;
+  color: var(--emerald);
+  font-size: 1.4375rem;
+  letter-spacing: -0.04em;
+  line-height: 1.4;
+}
+
+.partnership-summary-heading p {
+  margin-bottom: 22px;
+  color: var(--muted);
+  font-size: 0.8125rem;
+  line-height: 1.8;
+}
+
+.partnership-summary-selections {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px 22px;
+  margin: 0 0 26px;
+  padding: 18px;
+  border: 1px solid #e8e9df;
+  border-radius: 8px;
+  background: #f8f8f3;
+}
+
+.partnership-summary-selections dt,
+.partnership-summary-contact dt {
+  color: #5c6b60;
+  font-size: 0.6875rem;
+  line-height: 1.7;
+}
+
+.partnership-summary-selections dd {
+  margin: 4px 0 0;
+  color: var(--ink);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.65;
+}
+
+.partnership-summary-guidance {
+  display: grid;
+  gap: 23px;
+}
+
+.partnership-guidance-item {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  gap: 11px;
+}
+
+.partnership-guidance-icon {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 8px;
+  background: #f0f4ed;
+  color: var(--emerald);
+}
+
+.partnership-guidance-item h4,
+.partnership-summary-contact h4 {
+  margin: 2px 0 6px;
+  color: var(--ink);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.partnership-guidance-item p {
+  margin-bottom: 0;
+  color: #5c6b60;
+  font-size: 0.8125rem;
+  line-height: 1.8;
+}
+
+.partnership-summary-note {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin: 25px 0 0;
+  padding: 14px;
+  border: 1px solid #e9e2d3;
+  border-radius: 8px;
+  background: #f8f5ec;
+  color: #66593e;
+  font-size: 0.75rem;
+  line-height: 1.8;
+}
+
+.partnership-summary-note > svg {
+  margin-top: 3px;
+  color: #806334;
+}
+
+.partnership-summary-contact {
+  margin-top: 24px;
+  padding-top: 21px;
+  border-top: 1px solid var(--border);
+}
+
+.partnership-contact-caption {
+  margin-bottom: 15px;
+  color: var(--muted);
+  font-size: 0.75rem;
+  line-height: 1.7;
+}
+
+.partnership-summary-contact dl {
+  display: grid;
+  gap: 11px;
+  margin: 0;
+}
+
+.partnership-summary-contact dl > div {
+  min-width: 0;
+}
+
+.partnership-summary-contact dt {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.partnership-summary-contact dd {
+  margin: 3px 0 0 21px;
+  color: var(--ink);
+  font-size: 0.8125rem;
+  line-height: 1.7;
+}
+
+.partnership-print-only {
+  display: none;
+}
+
+.partnership-next {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: center;
+  margin-top: 48px;
+  padding: 30px 0 0;
+  border-top: 1px solid var(--border);
+}
+
+.partnership-next-icon {
+  display: grid;
+  width: 64px;
+  height: 64px;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface-sage);
+  color: var(--emerald);
+  box-shadow:
+    inset 0 1px #fff,
+    var(--shadow-soft);
+}
+
+.partnership-next h2 {
+  margin: 12px 0 8px;
+  color: var(--emerald);
+  font-size: clamp(1.25rem, 2.2vw, 1.625rem);
+  letter-spacing: -0.035em;
+  line-height: 1.4;
+}
+
+.partnership-next p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.75;
+}
+
+@media screen {
+  .pilot-print-summary {
+    box-shadow:
+      0 2px 4px #123f3105,
+      0 15px 35px -18px #123f3133;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .partnership-steps > li:hover {
+    box-shadow: inset 0 3px var(--gold);
+  }
+  .partnership-role-card:hover {
+    transform: translateY(-4px);
+    border-color: #b5c8a9;
+    box-shadow: var(--shadow-raised);
+  }
+}
+
+@media (max-width: 1100px) {
+  .partnership-intro {
+    gap: 32px;
+  }
+
+  .partnership-steps > li {
+    padding: 22px 19px;
+  }
+
+  .partnership-planner-body {
+    gap: 25px;
+    padding: 26px;
+  }
+
+  .partnership-field-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .pilot-print-summary {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 850px) {
+  .partnership-intro {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .partnership-intro .page-header > p {
+    max-width: 640px;
+  }
+
+  .partnership-principle {
+    padding: 30px;
+  }
+
+  .partnership-principle > p {
+    max-width: 540px;
+  }
+
+  .partnership-connected-icons {
+    margin-top: 25px;
+  }
+
+  .partnership-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .partnership-section-heading > p {
+    max-width: 500px;
+  }
+
+  .partnership-section-heading > p br {
+    display: none;
+  }
+
+  .partnership-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .partnership-steps > li {
+    padding: 24px;
+  }
+
+  .partnership-role-grid {
+    gap: 18px;
+  }
+
+  .partnership-role-card {
+    padding: 24px;
+  }
+
+  .partnership-role-card > header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .partnership-planner-heading {
+    padding: 30px;
+  }
+
+  .partnership-planner-body {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+    padding: 30px;
+  }
+
+  .partnership-field-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .pilot-print-summary {
+    padding: 28px;
+  }
+
+  .partnership-next {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .partnership-next > .button {
+    grid-column: 2;
+    justify-self: start;
+  }
+}
+
+@media (max-width: 540px) {
+  .partnership-intro {
+    gap: 28px;
+  }
+
+  .partnership-intro h1 {
+    max-width: 370px;
+    font-size: clamp(2.55rem, 10vw, 3.2rem);
+  }
+
+  .partnership-intro .page-header > p {
+    font-size: 0.9375rem;
+  }
+
+  .partnership-intro-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  .partnership-intro-actions > span {
+    max-width: none;
+  }
+
+  .partnership-principle {
+    padding: 25px;
+    border-bottom-right-radius: 48px;
+  }
+
+  .partnership-principle .partnership-small-label {
+    max-width: 200px;
+    font-size: 0.625rem;
+  }
+
+  .partnership-steps > li {
+    padding: 20px 17px;
+  }
+
+  .partnership-step-top {
+    margin-bottom: 18px;
+  }
+
+  .partnership-steps h3 {
+    font-size: 0.875rem;
+  }
+
+  .partnership-steps p {
+    font-size: 0.8125rem;
+    line-height: 1.75;
+  }
+
+  .partnership-role-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .partnership-role-card > header {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .partnership-role-card {
+    padding: 24px 21px;
+  }
+
+  .partnership-role-card h3 {
+    font-size: 1.125rem;
+  }
+
+  .partnership-role-card .partnership-small-label {
+    letter-spacing: 0.08em;
+  }
+
+  .partnership-planner {
+    border-radius: 18px;
+  }
+
+  .partnership-planner-heading {
+    gap: 15px;
+    padding: 26px 21px;
+  }
+
+  .partnership-planner-heading .eyebrow {
+    font-size: 0.625rem;
+    letter-spacing: 0.08em;
+  }
+
+  .partnership-planner-mark {
+    display: none;
+  }
+
+  .partnership-planner-body {
+    padding: 25px 16px 16px;
+  }
+
+  .partnership-planner-fields > legend {
+    font-size: 1rem;
+  }
+
+  .partnership-field-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .partnership-field :is(select, input) {
+    font-size: 1rem;
+  }
+
+  .partnership-planner-actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .pilot-print-summary {
+    padding: 23px 18px;
+  }
+
+  .partnership-summary-heading h3 {
+    font-size: 1.3rem;
+  }
+
+  .partnership-summary-selections {
+    gap: 16px 14px;
+    padding: 15px 12px;
+  }
+
+  .partnership-guidance-item {
+    grid-template-columns: 25px minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .partnership-guidance-icon {
+    width: 25px;
+    height: 27px;
+    border-radius: 6px;
+  }
+
+  .partnership-summary-note {
+    padding: 12px;
+  }
+
+  .partnership-next {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .partnership-next-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .partnership-next > .button {
+    grid-column: 1;
+    max-width: 100%;
+  }
+}
+
+@media (forced-colors: active) {
+  .partnership-page :is(select, input, .button, summary):focus-visible {
+    outline-color: Highlight;
+  }
+
+  .partnership-guidance-icon,
+  .partnership-role-icon {
+    border: 1px solid CanvasText;
+  }
+}
+
+@media print {
+  @page partnership-summary {
+    size: A4 portrait;
+    margin: 14mm;
+  }
+
+  /* Keep the brief in normal flow and remove every unrelated layout branch. */
+  body:has(.pilot-print-summary)
+    *:not(:has(.pilot-print-summary)):not(.pilot-print-summary):not(
+      .pilot-print-summary *
+    ) {
+    display: none !important;
+  }
+
+  body:has(.pilot-print-summary),
+  body:has(.pilot-print-summary) *:has(.pilot-print-summary) {
+    position: static !important;
+    display: block !important;
+    float: none !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: white !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+
+  body:has(.pilot-print-summary) *:has(.pilot-print-summary)::before,
+  body:has(.pilot-print-summary) *:has(.pilot-print-summary)::after {
+    content: none !important;
+  }
+
+  .pilot-print-summary {
+    page: partnership-summary;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: white;
+    color: #1b3029;
+    box-shadow: none;
+    font-family: Arial, sans-serif;
+    font-size: 9pt;
+    line-height: 1.45;
+  }
+
+  .pilot-print-summary *,
+  .pilot-print-summary *::before,
+  .pilot-print-summary *::after {
+    color: #1b3029 !important;
+    text-shadow: none !important;
+    animation: none !important;
+  }
+
+  .pilot-print-summary
+    :is(svg, button, input, select, .partnership-guidance-icon) {
+    display: none !important;
+  }
+
+  .pilot-print-summary .partnership-print-only {
+    display: block;
+  }
+
+  .pilot-print-summary .partnership-print-brand {
+    margin: 0 0 5mm;
+    padding-bottom: 3mm;
+    border-bottom: 0.4mm solid #1b3029;
+    font-size: 10pt;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  .partnership-summary-heading {
+    break-inside: avoid;
+  }
+
+  .partnership-summary-label {
+    font-size: 8pt;
+  }
+
+  .partnership-summary-label > span {
+    display: none;
+  }
+
+  .partnership-summary-heading h3 {
+    margin: 2mm 0;
+    font-size: 21pt;
+    line-height: 1.2;
+  }
+
+  .partnership-summary-heading p {
+    margin: 0 0 5mm;
+    font-size: 9pt;
+    line-height: 1.5;
+  }
+
+  .partnership-summary-selections {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3mm 7mm;
+    margin: 0 0 5mm;
+    padding: 3mm;
+    border: 0.25mm solid #b4bcb5;
+    border-radius: 0;
+    background: transparent;
+    break-inside: avoid;
+  }
+
+  .partnership-summary-selections dt,
+  .partnership-summary-contact dt {
+    font-size: 8pt;
+    line-height: 1.4;
+  }
+
+  .partnership-summary-selections dd {
+    margin-top: 1mm;
+    font-size: 9pt;
+    line-height: 1.5;
+  }
+
+  .partnership-summary-guidance {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4mm 7mm;
+  }
+
+  .partnership-guidance-item {
+    display: block;
+    break-inside: avoid;
+  }
+
+  .pilot-print-summary h4 {
+    margin: 0 0 1.5mm;
+    font-size: 9.5pt;
+    line-height: 1.4;
+    break-after: avoid;
+  }
+
+  .partnership-guidance-item p {
+    margin: 0;
+    font-size: 9pt;
+    line-height: 1.5;
+    orphans: 3;
+    widows: 3;
+  }
+
+  .partnership-summary-note {
+    display: block;
+    margin: 5mm 0;
+    padding: 3mm;
+    border: 0.25mm solid #b4bcb5;
+    border-radius: 0;
+    background: transparent;
+    font-size: 8.5pt;
+    line-height: 1.5;
+    break-inside: avoid;
+  }
+
+  .partnership-print-responsibilities {
+    margin-top: 5mm;
+  }
+
+  .partnership-print-role-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7mm;
+  }
+
+  .partnership-print-role-grid > div {
+    break-inside: avoid;
+  }
+
+  .partnership-print-role-grid h5 {
+    margin: 2mm 0 1.5mm;
+    font-size: 9pt;
+  }
+
+  .partnership-print-role-grid ul {
+    margin: 0;
+    padding-left: 4mm;
+  }
+
+  .partnership-print-role-grid li {
+    margin-bottom: 2mm;
+    font-size: 8.5pt;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+
+  .partnership-summary-contact {
+    margin-top: 4mm;
+    padding-top: 3mm;
+    border-top: 0.25mm solid #b4bcb5;
+    break-inside: avoid;
+  }
+
+  .partnership-contact-caption {
+    margin: 0 0 2mm;
+    font-size: 8pt;
+    line-height: 1.4;
+  }
+
+  .partnership-summary-contact dl {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4mm;
+  }
+
+  .partnership-summary-contact dd {
+    margin: 1mm 0 0;
+    font-size: 8.5pt;
+    line-height: 1.4;
+  }
+
+  .partnership-print-closing {
+    margin: 4mm 0 0;
+    padding-top: 3mm;
+    border-top: 0.25mm solid #b4bcb5;
+    font-size: 8pt;
+    line-height: 1.5;
+    break-inside: avoid;
+  }
+}

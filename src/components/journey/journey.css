@@ -1,0 +1,312 @@
+.educational-journey {
+  --journey-progress: 0;
+  position: relative;
+  width: 100%;
+  height: 740svh;
+  background: #0b4f3c;
+  isolation: isolate;
+}
+.journey-viewport {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  min-height: 0;
+  overflow: hidden;
+  background: #d7e2dc;
+}
+.journey-fallback-layer,
+.journey-webgl {
+  position: absolute !important;
+  inset: 0;
+  width: 100%;
+  height: 100% !important;
+}
+.journey-fallback-layer {
+  display: grid;
+  place-items: center;
+  background: #e5e7d8;
+}
+.journey-fallback {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.educational-journey[data-mode='webgl'] .journey-fallback-layer {
+  visibility: hidden;
+}
+.journey-webgl {
+  pointer-events: none;
+  touch-action: auto;
+}
+.journey-webgl canvas {
+  outline: none;
+}
+.journey-topbar {
+  position: absolute;
+  inset: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 25px 36px 50px;
+  background: linear-gradient(#062e24c9, #062e2400);
+  pointer-events: none;
+}
+.journey-identity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--parchment);
+}
+.journey-identity > span {
+  font:
+    700 22px 'Manrope',
+    sans-serif;
+  letter-spacing: -0.05em;
+}
+.journey-identity .brand-mark {
+  color: var(--emerald);
+  outline: 1px solid #c9a24b90;
+  border-radius: 10px;
+}
+.journey-skip,
+.journey-roadmap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  min-height: 46px;
+  border-radius: 3px;
+  padding: 12px 18px;
+  font-size: 12px;
+  font-weight: 600;
+  pointer-events: auto;
+}
+.journey-skip {
+  background: #062e24;
+  color: var(--parchment);
+  border: 1px solid #e8cb7880;
+}
+.journey-skip:hover {
+  background: #0b4f3c;
+}
+.journey-roadmap {
+  background: var(--parchment);
+  color: var(--emerald-deep);
+  border: 1px solid var(--gold);
+  box-shadow: 0 4px 16px #0003;
+}
+.journey-roadmap[hidden] {
+  display: none;
+}
+.journey-roadmap:hover {
+  background: #fffaf0;
+}
+.educational-journey :focus-visible {
+  outline: 3px solid var(--gold-light);
+  outline-offset: 5px;
+}
+.journey-caption {
+  position: absolute;
+  bottom: 80px;
+  left: 36px;
+  max-width: min(530px, 60%);
+  padding: 20px 26px 24px;
+  background: #062e24ed;
+  border: 1px solid #c9a24b65;
+  color: var(--parchment);
+  pointer-events: none;
+}
+.journey-caption::before {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border: 1px solid #c9a24b30;
+  pointer-events: none;
+}
+.journey-caption > span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--gold-light);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+.journey-caption > p {
+  font:
+    500 clamp(24px, 2.7vw, 40px)/1.22 'Manrope',
+    sans-serif;
+  letter-spacing: -0.045em;
+  white-space: pre-line;
+}
+.journey-bottom-bar {
+  position: absolute;
+  inset: auto 36px 21px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.journey-chapters {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  background: #062e24e6;
+  border: 1px solid #c9a24b40;
+  border-radius: 30px;
+}
+.journey-chapters > span {
+  width: 6px;
+  height: 6px;
+  background: #cbd6cb;
+  border-radius: 50%;
+}
+.journey-chapters > .is-current {
+  background: var(--gold-light);
+  box-shadow: 0 0 0 3px #e8cb7825;
+}
+.journey-scroll-progress {
+  position: absolute;
+  inset: auto 0 0;
+  height: 3px;
+  background: var(--gold-light);
+  transform: scaleX(var(--journey-progress));
+  transform-origin: left;
+  pointer-events: none;
+}
+.educational-journey[data-mode='static'] {
+  height: auto;
+}
+.educational-journey[data-mode='static'] .journey-viewport {
+  position: relative;
+  height: min(820px, 90svh);
+  min-height: 580px;
+}
+.educational-journey[data-mode='static'] .journey-chapters,
+.educational-journey[data-mode='static'] .journey-scroll-progress {
+  display: none;
+}
+@media (max-width: 760px) {
+  .educational-journey {
+    height: 560svh;
+  }
+  .journey-viewport {
+    min-height: 0;
+  }
+  .journey-topbar {
+    padding: 18px 18px 40px;
+    gap: 12px;
+  }
+  .journey-identity {
+    gap: 8px;
+  }
+  .journey-identity > span {
+    font-size: 18px;
+  }
+  .journey-identity .brand-mark {
+    width: 30px;
+    height: 30px;
+  }
+  .journey-skip {
+    min-height: 44px;
+    padding: 10px 12px;
+    gap: 8px;
+    font-size: 11px;
+  }
+  .journey-caption {
+    left: 18px;
+    right: 18px;
+    max-width: none;
+    bottom: 85px;
+    padding: 17px 19px 20px;
+  }
+  .journey-caption > p {
+    font-size: 27px;
+  }
+  .journey-caption > span {
+    font-size: 9px;
+  }
+  .journey-bottom-bar {
+    left: 18px;
+    right: 18px;
+    bottom: 20px;
+  }
+  .journey-roadmap {
+    padding: 10px 13px;
+    font-size: 11px;
+    gap: 10px;
+  }
+  .journey-chapters {
+    gap: 8px;
+    padding: 11px;
+  }
+  .journey-chapters > span {
+    width: 4px;
+    height: 4px;
+  }
+  .educational-journey[data-mode='static'] .journey-viewport {
+    min-height: 600px;
+    height: 82svh;
+  }
+  .educational-journey[data-mode='static'] .journey-fallback {
+    width: 155%;
+    max-width: none;
+    height: auto;
+    margin-left: -27.5%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .educational-journey {
+    height: auto;
+  }
+  .journey-viewport {
+    position: relative;
+  }
+  .journey-scroll-progress {
+    display: none;
+  }
+}
+@media (max-height: 520px) {
+  .journey-topbar {
+    padding: 12px 20px 25px;
+  }
+  .journey-caption {
+    left: 20px;
+    bottom: 65px;
+    max-width: min(440px, 65%);
+    padding: 12px 18px 16px;
+  }
+  .journey-caption > span {
+    margin-bottom: 7px;
+    font-size: 9px;
+  }
+  .journey-caption > p {
+    font-size: clamp(18px, 2.7vw, 26px);
+    line-height: 1.15;
+  }
+  .journey-bottom-bar {
+    left: 20px;
+    right: 20px;
+    bottom: 10px;
+  }
+  .educational-journey[data-mode='static'] .journey-viewport {
+    height: 100svh;
+    min-height: 0;
+  }
+}
+@media (forced-colors: active) {
+  .journey-caption,
+  .journey-skip,
+  .journey-roadmap {
+    background: Canvas;
+    color: CanvasText;
+    border: 1px solid CanvasText;
+  }
+  .journey-caption > span {
+    color: CanvasText;
+  }
+}
+@media print {
+  .educational-journey {
+    display: none;
+  }
+}

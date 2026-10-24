@@ -16,6 +16,7 @@ import { HeroIllustration } from '../components/HeroIllustration';
 import { ArchPortal, GeometricSeal } from '../components/CinematicOrnament';
 import EducationalJourney from '../components/journey/EducationalJourney';
 import { ProjectCard, ProjectDialog } from '../components/ProjectPreview';
+import TwoDivisionRoadmap from '../components/TwoDivisionRoadmap';
 import { Eyebrow, Icon, LinkButton, SectionHeading } from '../components/ui';
 import './home.css';
 import './cinematic.css';
@@ -80,6 +81,7 @@ export default function Home() {
         </section>
       </div>
       <EducationalJourney />
+      <TwoDivisionRoadmap />
       <div className="container purpose-strip">
         <span className="purpose-strip-title">
           EXISTING KNOWLEDGE.

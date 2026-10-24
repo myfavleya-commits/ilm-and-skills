@@ -328,7 +328,7 @@ test('presentation supports keyboard, progress selection, fullscreen fallback, a
   await page.getByRole('button', { name: 'Next', exact: true }).click();
   await page
     .getByRole('button', {
-      name: 'Go to slide 4: The Learning Roadmap',
+      name: 'Go to slide 5: The Learning Roadmap',
       exact: true,
     })
     .click();
@@ -338,6 +338,7 @@ test('presentation supports keyboard, progress selection, fullscreen fallback, a
   const slideTitles = [
     'Our Vision',
     'Who We Serve',
+    'Two Learning Divisions',
     'Starting from Zero',
     'The Learning Roadmap',
     'Practical Student Projects',

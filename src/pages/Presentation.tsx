@@ -26,6 +26,7 @@ import { BrandMark, Icon } from '../components/ui';
 import { site } from '../config/site';
 import { projects } from '../data/projects';
 import { stages } from '../data/roadmap';
+import { learningDivisions } from '../data/divisions';
 import './presentation.css';
 
 const slides = [
@@ -44,6 +45,14 @@ const slides = [
     description:
       "For students, educators, and teams in Islamic institutions. Build on existing knowledge, with support shaped around each learner's experience and needs.",
     visual: 'audience',
+  },
+  {
+    title: 'Two Learning Divisions',
+    message: 'Two communities.',
+    emphasis: 'One shared mission.',
+    description:
+      'A complementary model: modern skills for madrasa students and graduates in Pakistan, alongside Quranic and Islamic education for Muslim communities abroad.',
+    visual: 'divisions',
   },
   {
     title: 'Starting from Zero',
@@ -179,6 +188,36 @@ function SlideVisual({ kind }: { kind: (typeof slides)[number]['visual'] }) {
           </div>
           <p className="pres-visual-note">
             Different starting points. Equal respect.
+          </p>
+        </>
+      );
+
+    case 'divisions':
+      return (
+        <>
+          <p className="pres-visual-eyebrow">
+            Different contexts. Careful pathways.
+          </p>
+          <div className="pres-division-visual">
+            <div className="pres-division-node pres-division-pakistan">
+              <Icon name={learningDivisions[0].icon} size={27} />
+              <strong>{learningDivisions[0].title}</strong>
+              <span>Madrasa students &amp; graduates</span>
+              <small>Modern, digital &amp; professional skills</small>
+            </div>
+            <div className="pres-division-center">
+              <BrandMark small />
+              <strong>Ilm &amp; Skills</strong>
+            </div>
+            <div className="pres-division-node pres-division-international">
+              <Icon name={learningDivisions[1].icon} size={27} />
+              <strong>{learningDivisions[1].title}</strong>
+              <span>Muslim communities abroad</span>
+              <small>Quranic &amp; Islamic education</small>
+            </div>
+          </div>
+          <p className="pres-visual-note">
+            Complementary, proposed pathways shaped around learner context.
           </p>
         </>
       );

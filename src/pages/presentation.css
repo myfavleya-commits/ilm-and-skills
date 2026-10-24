@@ -458,6 +458,96 @@
   line-height: 1.45;
 }
 
+.pres-division-visual {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 74px 1fr;
+  align-items: center;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.pres-division-visual::before,
+.pres-division-visual::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: calc(50% - 37px);
+  border-top: 1px solid #b99a6080;
+}
+
+.pres-division-visual::before {
+  left: 0;
+}
+
+.pres-division-visual::after {
+  right: 0;
+}
+
+.pres-division-node {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  min-height: 175px;
+  padding: 20px 10px;
+  border: 1px solid #c9a24b80;
+  border-radius: 3px;
+  background: #fffef9;
+  color: var(--pres-emerald);
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+}
+
+.pres-division-international {
+  color: #253c73;
+  border-color: #7a88ac80;
+}
+
+.pres-division-node strong {
+  margin-top: 10px;
+  font-family: Manrope, sans-serif;
+  font-size: 18px;
+}
+
+.pres-division-node span,
+.pres-division-node small {
+  color: var(--pres-muted);
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+.pres-division-node small {
+  margin-top: 5px;
+  color: var(--pres-gold-ink);
+}
+
+.pres-division-center {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  padding: 9px 4px;
+  border: 1px solid var(--pres-gold);
+  border-radius: 50%;
+  background: var(--pres-deep);
+  color: var(--pres-ivory);
+  box-shadow: 0 7px 16px #123f3130;
+  font-size: 9px;
+  text-align: center;
+}
+
+.pres-division-center .brand-mark {
+  width: 29px;
+  height: 29px;
+}
+
+.pres-division-center strong {
+  font-family: Manrope, sans-serif;
+  font-size: 9px;
+}
+
 .pres-audience p,
 .pres-pilot-step p {
   margin-top: 4px;
@@ -1370,6 +1460,54 @@
   .pres-audiences {
     gap: 9px;
     margin-top: 17px;
+  }
+
+  .pres-division-visual {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 17px;
+  }
+
+  .pres-division-visual::before,
+  .pres-division-visual::after {
+    top: 50%;
+    left: 50%;
+    right: auto;
+    width: 1px;
+    height: 100%;
+    border-top: 0;
+    border-left: 1px solid #b99a6080;
+    transform: translateX(-50%);
+  }
+
+  .pres-division-visual::before {
+    top: 20%;
+    height: 60%;
+  }
+
+  .pres-division-visual::after {
+    display: none;
+  }
+
+  .pres-division-node {
+    min-height: 0;
+    padding: 15px 10px;
+  }
+
+  .pres-division-node strong {
+    margin-top: 6px;
+    font-size: 16px;
+  }
+
+  .pres-division-center {
+    grid-row: 2;
+    justify-self: center;
+    width: 104px;
+    border-radius: 50%;
+  }
+
+  .pres-division-international {
+    grid-row: 3;
   }
 
   .pres-audience {

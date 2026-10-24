@@ -37,8 +37,39 @@ test('architectural motion follows scroll rather than an autoplay timer', async 
     'true',
   );
   expect(await page.locator('.home-cinematic').getByRole('link').count()).toBe(
-    11,
+    13,
   );
+});
+
+test('two-division roadmap explains both audiences and expands proposed courses', async ({
+  page,
+}) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/');
+
+  await expect(
+    page.getByRole('heading', { name: /Two communities/ }),
+  ).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Pakistan' })).toBeVisible();
+  await expect(
+    page.getByRole('heading', { name: 'International' }),
+  ).toBeVisible();
+
+  await page
+    .getByRole('button', { name: 'Technology & digital foundations' })
+    .click();
+  await expect(
+    page.getByText('Web development', { exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.getByText('Artificial intelligence literacy', { exact: true }),
+  ).toBeVisible();
+
+  await page.getByRole('button', { name: 'Quranic studies' }).click();
+  await expect(page.getByText('Tajweed', { exact: true })).toBeVisible();
+  await expect(
+    page.getByText('Quran translation', { exact: true }),
+  ).toBeVisible();
 });
 
 test('live reduced-motion changes stop every added timeline and expose all content', async ({
@@ -178,6 +209,7 @@ test('responsive scene checks and desktop/mobile screenshot gallery', async ({
         fullPage: true,
       });
       for (const [name, selector] of [
+        ['two-divisions', '.two-division-roadmap'],
         ['pathway', '.illuminated-panel'],
         ['audience', '.home-audience'],
         ['star', '.star-transition'],

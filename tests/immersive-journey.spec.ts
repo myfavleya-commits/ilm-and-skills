@@ -179,7 +179,7 @@ async function skipToContent(page: Page) {
   });
   await expect(skip).toBeVisible();
   await skip.click();
-  const purpose = page.locator('.educational-journey + .purpose-strip');
+  const purpose = page.locator('.educational-journey + .two-division-roadmap');
   await expect(purpose).toBeInViewport();
   await expect
     .poll(async () =>
@@ -261,13 +261,22 @@ test('desktop real-WebGL six-scene gallery reverses deterministically and cleans
   await expect(page.locator('canvas')).toHaveCount(0);
 });
 
-test('landscape keeps the skip control and final action inside the actual viewport', async ({ page }, testInfo) => {
-  test.skip(testInfo.project.name !== 'desktop', 'One explicit landscape matrix.');
+test('landscape keeps the skip control and final action inside the actual viewport', async ({
+  page,
+}, testInfo) => {
+  test.skip(
+    testInfo.project.name !== 'desktop',
+    'One explicit landscape matrix.',
+  );
   test.setTimeout(120_000);
   await page.setViewportSize({ width: 844, height: 390 });
   const journey = await startWebGL(page, testInfo);
   await scrollToProgress(page, 0.975, 5);
-  for (const selector of ['.journey-skip', '.journey-roadmap', '.journey-caption']) {
+  for (const selector of [
+    '.journey-skip',
+    '.journey-roadmap',
+    '.journey-caption',
+  ]) {
     const box = await journey.locator(selector).boundingBox();
     expect(box).not.toBeNull();
     expect(box!.y).toBeGreaterThanOrEqual(0);
@@ -278,16 +287,23 @@ test('landscape keeps the skip control and final action inside the actual viewpo
   await skipToContent(page);
 });
 
-test('actual WebGL context loss returns to the usable static alternative', async ({ page }, testInfo) => {
-  test.skip(testInfo.project.name !== 'desktop', 'Context-loss lifecycle is shared.');
+test('actual WebGL context loss returns to the usable static alternative', async ({
+  page,
+}, testInfo) => {
+  test.skip(
+    testInfo.project.name !== 'desktop',
+    'Context-loss lifecycle is shared.',
+  );
   test.setTimeout(90_000);
   const journey = await startWebGL(page, testInfo);
-  const extensionAvailable = await journey.locator('canvas').evaluate((canvas) => {
-    const gl = (canvas as HTMLCanvasElement).getContext('webgl2');
-    const extension = gl?.getExtension('WEBGL_lose_context');
-    extension?.loseContext();
-    return Boolean(extension);
-  });
+  const extensionAvailable = await journey
+    .locator('canvas')
+    .evaluate((canvas) => {
+      const gl = (canvas as HTMLCanvasElement).getContext('webgl2');
+      const extension = gl?.getExtension('WEBGL_lose_context');
+      extension?.loseContext();
+      return Boolean(extension);
+    });
   expect(extensionAvailable).toBe(true);
   await expectStaticJourney(page);
   await skipToContent(page);
@@ -345,7 +361,9 @@ test('reduced motion preserves the original hero and content order with a short 
       .getByRole('link', { name: roadmapLabel, exact: true }),
   ).toHaveAttribute('href', '/roadmap');
   await expect(
-    page.locator('.hero-environment + .educational-journey + .purpose-strip'),
+    page.locator(
+      '.hero-environment + .educational-journey + .two-division-roadmap',
+    ),
   ).toHaveCount(1);
   const journey = page.locator('.educational-journey');
   await expect(journey.locator('.journey-caption > p')).toHaveText(
